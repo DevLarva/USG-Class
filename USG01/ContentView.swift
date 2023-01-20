@@ -14,7 +14,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isOn = false
+    @State var NewsToggle = false
+    @State var FeatureToggle = false
+    @State var WWDCToggle = false
     @State var isTechTalksOn = false
     @State var isPresentatedDialog = false
     @State private var names = ["리이오", "링고", "영", "테드"]
@@ -35,7 +37,11 @@ struct ContentView: View {
                             "로그인",
                             isPresented: $isPresentatedDialog
                         ) {
-                            Button ("bdh3620@naver.com"){
+                            Button ("bdh3620@naver.com")
+                            {
+                                
+                                            
+
                             }
                             Button("Apple ID로 로그인") {}
                         } message: {
@@ -51,13 +57,13 @@ struct ContentView: View {
                         NavigationLink {
                             List {
                                 Section {
-                                    Toggle(isOn: $isOn) {
+                                    Toggle(isOn: $NewsToggle) {
                                         Text("News Highlights")
                                     }
-                                    Toggle(isOn: $isOn) {
+                                    Toggle(isOn: $FeatureToggle) {
                                         Text("Feature Stories")
                                     }
-                                    Toggle(isOn: $isOn) {
+                                    Toggle(isOn: $WWDCToggle) {
                                         Text("WWDC")
                                     }
                                     Toggle(isOn: $isTechTalksOn) {

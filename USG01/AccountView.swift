@@ -38,6 +38,8 @@ struct AccountView: View {
                         Text("계정 소유자")
                     }
                 }
+            }header: {
+                 Text("팀")
             }
             Section {
                 Text("로그아웃")
