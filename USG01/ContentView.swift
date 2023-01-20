@@ -35,9 +35,11 @@ struct ContentView: View {
                             "로그인",
                             isPresented: $isPresentatedDialog
                         ) {
+                            Button ("bdh3620@naver.com"){
+                            }
                             Button("Apple ID로 로그인") {}
                         } message: {
-                            Text("기존 iCloud 계정을 ....")
+                            Text("기존 iCloud 계정을 ~~~")
                         }
                         
                         
@@ -96,6 +98,7 @@ struct ContentView: View {
                 }
                 .navigationTitle("계정")
                 TextField("이름", text: $name)
+                    .padding()
                 Button("추가") {
                     names.append(name)
                 }
