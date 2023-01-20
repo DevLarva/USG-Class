@@ -7,17 +7,22 @@
 
 import SwiftUI
 
+
 struct LoginModalView: View {
+    @Binding var isClosed: Bool
+    
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            isClosed.toggle()
+        } label: {
+            Label("닫기버튼", systemImage: "multiply.square")
         }
-        
     }
 }
 
+
 struct LoginModalView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginModalView()
+        LoginModalView(isClosed: .constant(true))
     }
 }
