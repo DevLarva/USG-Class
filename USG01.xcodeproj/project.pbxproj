@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC0EDE7C29756E6800ADB62C /* LoginModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0EDE7B29756E6800ADB62C /* LoginModalView.swift */; };
 		AC0EDE7E2975719300ADB62C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0EDE7D2975719300ADB62C /* AlertView.swift */; };
+		AC4B8AE429817B4B0017D83B /* TextFieldClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B8AE329817B4B0017D83B /* TextFieldClearButton.swift */; };
 		AC548BEE297A86A90054DC13 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC548BED297A86A90054DC13 /* AccountView.swift */; };
 		AC548BF0297A900B0054DC13 /* ItemTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC548BEF297A900B0054DC13 /* ItemTabView.swift */; };
 		AC548BF2297A9A5E0054DC13 /* NewDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		AC0EDE7B29756E6800ADB62C /* LoginModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModalView.swift; sourceTree = "<group>"; };
 		AC0EDE7D2975719300ADB62C /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		AC4B8AE329817B4B0017D83B /* TextFieldClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButton.swift; sourceTree = "<group>"; };
 		AC548BED297A86A90054DC13 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		AC548BEF297A900B0054DC13 /* ItemTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTabView.swift; sourceTree = "<group>"; };
 		AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiscoverView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				ACC7DB6629702875002E7821 /* USG01App.swift */,
 				ACC7DB6829702875002E7821 /* ContentView.swift */,
+				AC4B8AE329817B4B0017D83B /* TextFieldClearButton.swift */,
 				AC548BED297A86A90054DC13 /* AccountView.swift */,
 				AC548BEF297A900B0054DC13 /* ItemTabView.swift */,
 				AC548BF9297A9AFF0054DC13 /* TabGroup */,
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC548BEE297A86A90054DC13 /* AccountView.swift in Sources */,
+				AC4B8AE429817B4B0017D83B /* TextFieldClearButton.swift in Sources */,
 				ACC7DB6929702875002E7821 /* ContentView.swift in Sources */,
 				AC548BF4297A9A7D0054DC13 /* AroundView.swift in Sources */,
 				AC0EDE7E2975719300ADB62C /* AlertView.swift in Sources */,

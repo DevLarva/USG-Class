@@ -101,13 +101,23 @@ struct ContentView: View {
 
                         
                     }
+                    Section {
+                        TextField("이름", text: $name)
+                            .padding()
+                            .textFieldStyle(.roundedBorder)
+                            .onAppear {
+                                UITextField.appearance().clearButtonMode = .whileEditing
+                            }
+                        
+                        Button("추가") {
+                            names.append(name)
+                        }
+                    }
                 }
                 .navigationTitle("계정")
-                TextField("이름", text: $name)
-                    .padding()
-                Button("추가") {
-                    names.append(name)
-                }
+                
+                   
+                
             }
             .sheet(isPresented: $showModal) {
                 LoginModalView(isClosed: $showModal)
