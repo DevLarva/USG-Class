@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewDiscoverView: View {
-    
+    @State var tag:Int? = nil
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -20,11 +20,11 @@ struct NewDiscoverView: View {
                         .frame(width: 400, height: 300)
                         .padding()
                     
-                    
-                    Button {
-                        print("버튼 클릭!")
-                        
-                    } label: {
+                    NavigationLink(destination: HigDetailView(), tag: 1, selection: self.$tag ){
+                    }
+                    Button(action: {
+                        self.tag = 1
+                    }) {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .foregroundColor(.systemGray4)
                             .overlay(VStack(alignment: .leading  , spacing: 10) {
@@ -39,7 +39,7 @@ struct NewDiscoverView: View {
                         
                     }
                     Button {
-                        print("버튼 클릭!")
+                        
                     } label: {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .foregroundColor(.systemGray4)

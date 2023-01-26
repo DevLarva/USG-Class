@@ -20,6 +20,7 @@
 		ACC7DB6E29702876002E7821 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC7DB6D29702876002E7821 /* Preview Assets.xcassets */; };
 		ACF5CE8129824015000D29B9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5CE8029824015000D29B9 /* AccountView.swift */; };
 		ACF5CE8329824069000D29B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5CE8229824069000D29B9 /* ContentView.swift */; };
+		ACF5CE9A2982D570000D29B9 /* HigDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5CE992982D570000D29B9 /* HigDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		ACC7DB6D29702876002E7821 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACF5CE8029824015000D29B9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		ACF5CE8229824069000D29B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACF5CE992982D570000D29B9 /* HigDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				AC548BF3297A9A7D0054DC13 /* AroundView.swift */,
 				AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */,
+				ACF5CE992982D570000D29B9 /* HigDetailView.swift */,
 				AC548BF7297A9AE70054DC13 /* SearchView.swift */,
 				AC548BF5297A9A8D0054DC13 /* WWDCView.swift */,
 			);
@@ -83,8 +86,7 @@
 			children = (
 				AC4B8AE5298181AE0017D83B /* Info.plist */,
 				ACC7DB6629702875002E7821 /* USG01App.swift */,
-				ACF5CE8029824015000D29B9 /* AccountView.swift */,
-				AC548BED297A86A90054DC13 /* AccountDetailView.swift */,
+				ACF5CE9B2982D583000D29B9 /* Account */,
 				ACF5CE8229824069000D29B9 /* ContentView.swift */,
 				AC548BF9297A9AFF0054DC13 /* TabGroup */,
 				ACAA09C9297965F400769E58 /* DetailView.swift */,
@@ -102,6 +104,15 @@
 				ACC7DB6D29702876002E7821 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACF5CE9B2982D583000D29B9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				AC548BED297A86A90054DC13 /* AccountDetailView.swift */,
+				ACF5CE8029824015000D29B9 /* AccountView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				AC0EDE7C29756E6800ADB62C /* LoginModalView.swift in Sources */,
 				AC548BF2297A9A5E0054DC13 /* NewDiscoverView.swift in Sources */,
 				AC548BF6297A9A8D0054DC13 /* WWDCView.swift in Sources */,
+				ACF5CE9A2982D570000D29B9 /* HigDetailView.swift in Sources */,
 				ACAA09CA297965F400769E58 /* DetailView.swift in Sources */,
 				ACC7DB6729702875002E7821 /* USG01App.swift in Sources */,
 				AC548BF8297A9AE70054DC13 /* SearchView.swift in Sources */,
