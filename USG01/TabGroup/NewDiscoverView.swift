@@ -18,13 +18,13 @@ struct NewDiscoverView: View {
                     .padding()
                 RoundedRectangle(cornerRadius: 25, style: .continuous)
                     .foregroundColor(.systemGray4)
-                    .overlay(VStack(spacing: 15) {
+                    .overlay(VStack(alignment: .listRowSeparatorLeading  , spacing: 15) {
                         Text("Explore the Human Interface Guidelines")
-                            .font(.title2)
+                            .font(.callout)
                             .bold()
                         Text("Learn best practices that can help you design a great experience for any Apple platform")
                             
-                    }.padding(.leading))
+                    })
                     .frame(width: 350, height: 100)
                     .padding()
                 
