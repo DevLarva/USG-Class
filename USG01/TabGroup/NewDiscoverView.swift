@@ -12,24 +12,53 @@ struct NewDiscoverView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                Image("new main")
-                    .resizable()
-                    .frame(width: 400, height: 300)
-                    .padding()
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .foregroundColor(.systemGray4)
-                    .overlay(VStack(alignment: .listRowSeparatorLeading  , spacing: 15) {
-                        Text("Explore the Human Interface Guidelines")
-                            .font(.callout)
-                            .bold()
-                        Text("Learn best practices that can help you design a great experience for any Apple platform")
-                            
-                    })
-                    .frame(width: 350, height: 100)
-                    .padding()
                 
+                VStack(spacing: 15) {
+                    
+                    Image("new main")
+                        .resizable()
+                        .frame(width: 400, height: 300)
+                        .padding()
+                    
+                    
+                    Button {
+                        print("버튼 클릭!")
+                        
+                    } label: {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .foregroundColor(.systemGray4)
+                            .overlay(VStack(alignment: .leading  , spacing: 10) {
+                                Text("Explore the Human Interface Guidelines")
+                                    .font(.callout)
+                                    .bold().foregroundColor(.black)
+                                Text("Learn best practices that can help you design a great experience for any Apple platform")
+                                    .foregroundColor(.secondary)
+                                
+                            })
+                            .frame(width: 350, height: 110)
+                        
+                    }
+                    Button {
+                        print("버튼 클릭!")
+                    } label: {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .foregroundColor(.systemGray4)
+                            .overlay(VStack(alignment: .leading  , spacing: 15) {
+                                Text("Explore the Human Interface Guidelines")
+                                    .font(.callout)
+                                    .bold().foregroundColor(.black)
+                                Text("Learn best practices that can help you design a great experience for any Apple platform")
+                                    .foregroundColor(.secondary)
+                                
+                            })
+                            .frame(width: 350, height: 110)
+                        
+                    }
+                    
+                    
+                }
+                .navigationTitle("새로운 발견")
             }
-            .navigationTitle("새로운 발견")
         }
     }
 }
