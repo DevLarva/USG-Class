@@ -6,11 +6,9 @@
 //
 
 import Foundation
-
 struct Movie: Codable {
     let title: String
     let image: String
-    
 }
 
 struct MovieResponse: Codable {
@@ -28,7 +26,7 @@ func doIt(data: Data?, response: URLResponse?, error: Error?) {
         }
     }
     catch {
-        print("Error",error)
+        print("Error", error)
     }
 }
 
@@ -42,25 +40,59 @@ func fetchMovieList() {
     let request = URLRequest(url: url)
         
     // 3. Session, Task
-    let task = URLSession.shared.dataTask(with: request, completionHandler: doIt(data:response:error:))
-    task.resume()
+//    let task = URLSession.shared.dataTask(with: request, completionHandler: doIt(data:response:error:))
+//    task.resume()
     
-    let task2 = URLSession.shared.dataTask(with: request) { data, response, error in
+    URLSession.shared.dataTask(with: request) { data, response, error in
         do {
             let ret = try JSONDecoder().decode(MovieResponse.self, from: data!)
-            
+    //        print("ret :", ret.data)
             for item in ret.data {
                 print(item.title)
-                
             }
         }
         catch {
             print("Error", error)
-            
         }
-    }
+    }.resume()
 }
 
+struct LoginInfo: Codable {
+    let id: String
+    let password: String
+}
 
-fetchMovieList()
+struct LoginResult: Codable {
+    let token: String
+    let isAdmin: Bool
+    let name: String
+}
+
+struct LoginResponse: Codable {
+    let message: String
+    let data: LoginResult
+}
+
+// POST
+func tryLogin(id: String, pw: String) {
+    let url = URL(string: "http://mynf.codershigh.com:8080/api/auth/login")!
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "post"
+    
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    
+    let info = LoginInfo(id: id, password: pw)
+    let data: Data = try! JSONEncoder().encode(info)
+    request.httpBody = data
+    
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        print("data :", data, error)
+        let ret = try! JSONDecoder().decode(LoginResponse.self, from: data!)
+        print("token :", ret.data.token)
+    }.resume()
+}
+
+//fetchMovieList()
+tryLogin(id: "user1", pw: "1234")
 dispatchMain()
