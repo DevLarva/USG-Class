@@ -57,13 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2B58232984046800EDA3AD /* DiscoverGroup */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5CE992982D570000D29B9 /* HigDetailView.swift */,
+				AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */,
+				AC2B5821298402CA00EDA3AD /* DiscoverView.swift */,
+			);
+			path = DiscoverGroup;
+			sourceTree = "<group>";
+		};
 		AC548BF9297A9AFF0054DC13 /* TabGroup */ = {
 			isa = PBXGroup;
 			children = (
 				AC548BF3297A9A7D0054DC13 /* AroundView.swift */,
-				AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */,
-				AC2B5821298402CA00EDA3AD /* DiscoverView.swift */,
-				ACF5CE992982D570000D29B9 /* HigDetailView.swift */,
+				AC2B58232984046800EDA3AD /* DiscoverGroup */,
 				AC548BF7297A9AE70054DC13 /* SearchView.swift */,
 				AC548BF5297A9A8D0054DC13 /* WWDCView.swift */,
 				AC2B581F2983C7CA00EDA3AD /* WebView.swift */,
