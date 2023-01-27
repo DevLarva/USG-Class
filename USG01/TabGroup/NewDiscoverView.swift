@@ -38,16 +38,18 @@ struct NewDiscoverView: View {
                             .frame(width: 350, height: 110)
                         
                     }
-                    Button {
-                        
-                    } label: {
+                    NavigationLink(destination: DiscoverView(), tag: 2, selection: self.$tag ){
+                    }
+                    Button(action: {
+                        self.tag = 2
+                    }) {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .foregroundColor(.systemGray4)
                             .overlay(VStack(alignment: .leading  , spacing: 15) {
-                                Text("Explore the Human Interface Guidelines")
+                                Text("Discover Apple Design Resources")
                                     .font(.callout)
                                     .bold().foregroundColor(.black)
-                                Text("Learn best practices that can help you design a great experience for any Apple platform")
+                                Text("Find templates, icons, product bezels, and other materials to help you design apps for Apple platforms.")
                                     .foregroundColor(.secondary)
                                 
                             })
