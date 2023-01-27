@@ -11,7 +11,7 @@ struct HigDetailView: View {
     var body: some View {
         
         ScrollView {
-            VStack(alignment: .leading, spacing:0) {
+            VStack(alignment: .leading, spacing:10) {
                 Image("HIG")
                     .resizable()
                     .frame(width: 400, height: 200)
@@ -24,6 +24,16 @@ struct HigDetailView: View {
                     .padding(.horizontal)
                     .bold()
                     .font(.subheadline)
+            
+                NavigationLink(
+                    destination: MyWebview(urlToLoad: "https://developer.apple.com/kr/news/?id=v8a3aetj")){
+                        
+                        //버튼 자체에 대한 코드
+                        Text("HIG")
+                            .padding()
+                        
+                        
+                    }
             }
         }
         

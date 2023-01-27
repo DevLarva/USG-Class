@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC0EDE7C29756E6800ADB62C /* LoginModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0EDE7B29756E6800ADB62C /* LoginModalView.swift */; };
 		AC0EDE7E2975719300ADB62C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0EDE7D2975719300ADB62C /* AlertView.swift */; };
+		AC2B58202983C7CA00EDA3AD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B581F2983C7CA00EDA3AD /* WebView.swift */; };
 		AC548BEE297A86A90054DC13 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC548BED297A86A90054DC13 /* AccountDetailView.swift */; };
 		AC548BF2297A9A5E0054DC13 /* NewDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */; };
 		AC548BF4297A9A7D0054DC13 /* AroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC548BF3297A9A7D0054DC13 /* AroundView.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		AC0EDE7B29756E6800ADB62C /* LoginModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModalView.swift; sourceTree = "<group>"; };
 		AC0EDE7D2975719300ADB62C /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		AC2B581F2983C7CA00EDA3AD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AC4B8AE5298181AE0017D83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AC548BED297A86A90054DC13 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
 		AC548BF1297A9A5E0054DC13 /* NewDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiscoverView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				ACF5CE992982D570000D29B9 /* HigDetailView.swift */,
 				AC548BF7297A9AE70054DC13 /* SearchView.swift */,
 				AC548BF5297A9A8D0054DC13 /* WWDCView.swift */,
+				AC2B581F2983C7CA00EDA3AD /* WebView.swift */,
 			);
 			path = TabGroup;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				ACF5CE8129824015000D29B9 /* AccountView.swift in Sources */,
 				AC548BEE297A86A90054DC13 /* AccountDetailView.swift in Sources */,
+				AC2B58202983C7CA00EDA3AD /* WebView.swift in Sources */,
 				ACF5CE8329824069000D29B9 /* ContentView.swift in Sources */,
 				AC548BF4297A9A7D0054DC13 /* AroundView.swift in Sources */,
 				AC0EDE7E2975719300ADB62C /* AlertView.swift in Sources */,
@@ -329,6 +333,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = USG01/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -358,6 +363,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = USG01/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
