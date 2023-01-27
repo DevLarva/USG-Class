@@ -7,7 +7,7 @@
 
 import SwiftUI
 import WebKit
-
+import UIKit
 struct MyWebview: UIViewRepresentable {
     
     //열려고 하는 url 주소의 멤버변수
@@ -39,6 +39,6 @@ struct MyWebview: UIViewRepresentable {
 
 struct MyWebview_Previews: PreviewProvider {
     static var previews: some View {
-        MyWebview(urlToLoad: "https://www.naver.com")
+        MyWebview(urlToLoad: "https://github.com/bdh3620")
     }
 }

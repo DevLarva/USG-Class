@@ -24,16 +24,76 @@ struct HigDetailView: View {
                     .padding(.horizontal)
                     .bold()
                     .font(.subheadline)
-            
-                NavigationLink(
-                    destination: MyWebview(urlToLoad: "https://developer.apple.com/kr/news/?id=v8a3aetj")){
+                
+//  MARK: - HIG 가이드 라인(HIG)
+                VStack(alignment: .leading, spacing: 0) {
+                    Divider()
+                    HStack(alignment: .center,spacing: 0) {
                         
-                        //버튼 자체에 대한 코드
-                        Text("HIG")
-                            .padding()
-                        
-                        
+                        NavigationLink(
+                            destination: MyWebview(urlToLoad: "https://developer.apple.com/kr/news/?id=v8a3aetj")){
+                                
+                                //버튼 자체에 대한 코드
+                                Image(systemName: "doc.text")
+                                Text("Explore the Human Interface Guidelines")
+                                    
+                                
+                                
+                        }
                     }
+                    .padding()
+                   
+//  MARK: - HIG 가이드 라인(Live Activities)
+                    Divider()
+                    HStack(alignment: .center,spacing: 0) {
+                        
+                        NavigationLink(
+                            destination: MyWebview(urlToLoad: "https://developer.apple.com/design/human-interface-guidelines/components/system-experiences/live-activities")){
+                                
+                                //버튼 자체에 대한 코드
+                                Image(systemName: "doc.text")
+                                Text("Human Interface Guidelines - Live Activities")
+                                    
+                            }
+                                
+                                
+                        }
+                    .padding()
+//  MARK: - HIG 가이드 라인(Charts)
+                    Divider()
+                    HStack(alignment: .center,spacing: 0) {
+                        
+                        NavigationLink(
+                            destination: MyWebview(urlToLoad: "https://developer.apple.com/design/human-interface-guidelines/components/content/charts")){
+                                
+                                //버튼 자체에 대한 코드
+                                Image(systemName: "doc.text")
+                                Text("Human Interface Guidelines - Charts")
+                                    
+                            }
+                                
+                                
+                        }
+                    .padding()
+//  MARK: - HIG 가이드 라인(Always On)
+                    Divider()
+                    HStack(alignment: .center,spacing: 0) {
+                        
+                        NavigationLink(
+                            destination: MyWebview(urlToLoad: "https://developer.apple.com/design/human-interface-guidelines/technologies/always-on")){
+                                
+                                //버튼 자체에 대한 코드
+                                Image(systemName: "doc.text")
+                                Text("Human Interface Guidelines - Always On")
+                                    
+                            }
+                                
+                                
+                        }
+                    .padding()
+                }
+                
+                
             }
         }
         
