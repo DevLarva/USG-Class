@@ -27,7 +27,7 @@ struct NewDiscoverView: View {
                     }) {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .foregroundColor(.systemGray4)
-                            .overlay(VStack(alignment: .leading  , spacing: 10) {
+                            .overlay(VStack(alignment: .leading  , spacing: 15) {
                                 Text("Explore the Human Interface Guidelines")
                                     .font(.callout)
                                     .bold().foregroundColor(.black)

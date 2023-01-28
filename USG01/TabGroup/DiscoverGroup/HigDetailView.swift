@@ -10,6 +10,7 @@ import SwiftUI
 struct HigDetailView: View {
     var body: some View {
         
+        
         ScrollView {
             VStack(alignment: .leading, spacing:10) {
                 Image("HIG")

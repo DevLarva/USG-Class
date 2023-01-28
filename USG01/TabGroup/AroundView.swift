@@ -9,7 +9,35 @@ import SwiftUI
 
 struct AroundView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack {
+                    Image(systemName: "newspaper")
+                    Text("뉴스")
+                    
+                }
+                Divider()
+                HStack {
+                    Image(systemName: "bookmark")
+                    Text("책갈피")
+                }
+                Divider()
+                HStack {
+                    Image(systemName: "arrow.down.circle")
+                    Text("다운로드됨")
+                }
+                
+                
+                
+                
+            }
+            .padding()
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text("이어서 보기")
+            }
+            
+        }
     }
 }
 
