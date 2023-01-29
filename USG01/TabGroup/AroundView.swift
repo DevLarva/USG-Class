@@ -38,7 +38,8 @@ struct AroundView: View {
                     }
                     
                     HStack {
-                        Text("주제").bold()
+                        Text("주제")
+                            .bold()
                             .font(.title2)
                     }
                 }
