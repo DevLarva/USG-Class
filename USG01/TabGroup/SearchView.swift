@@ -17,7 +17,7 @@ struct SearchView: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                         TextField("검색", text: $searchText)
-                            .foregroundColor(.primary)
+                            .foregroundColor(.systemGray4)
                             
                         
                             .onTapGesture {
