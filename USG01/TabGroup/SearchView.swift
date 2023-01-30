@@ -17,11 +17,8 @@ struct SearchView: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                         TextField("검색", text: $searchText)
-                            .padding(7)
-                            .padding(.horizontal, 25)
-                            .background(Color(.systemGray6))
-                            .cornerRadius(8)
-                            .padding(.horizontal, 10)
+                            .foregroundColor(.primary)
+                            
                         
                             .onTapGesture {
                                 self.isEditing = true
@@ -33,14 +30,15 @@ struct SearchView: View {
                                 self.searchText = ""
                                 
                             }) {
-                                Text("Cancel")
+                                Text("취소")
                             }
-                            .padding(.trailing, 10)
+                            
                             .transition(.move(edge: .trailing))
                             .animation(.default)
                         }
                         
                     }
+                    .padding()
                     .navigationTitle("검색")
                 }
             }
