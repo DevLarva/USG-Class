@@ -24,27 +24,55 @@ struct ContentView: View {
                 List {
                     ForEach(movies, id:\.self) { item in
                         HStack {
-                            Image(systemName: item.image)
+                            AsyncImage(url: URL(string: "http://mynf.codershigh.com:8080"+item.image)) {
+                                image in
+                                image.resizable()
+                            } placeholder: {
+                                ProgressView()
+                            }
                             Text(item.title)
                         }
                     }
                 }
-                .navigationTitle("영화 리스트")
-                .toolbar {
-                    ToolbarItemGroup(placement: .automatic) {
-                        Button {
-                            movies = [Movie(title: "번개도둑", image: "bolt"),
-                                      Movie(title: "아바타2", image: "lock"),
-                                      Movie(title: "더 글로리", image: "bolt")]
-                        } label: {
-                            Image(systemName: "plus")
-                        }
-                    }
+                Button {
+                    fetchMovieList()
+                } label: {
+                    Text("추가 하라")
                 }
-                
             }
+            .navigationTitle("영화 리스트")
+            .toolbar {
+                ToolbarItemGroup(placement: .automatic) {
+            
+                }
+            }
+            
         }
     }
+}
+
+func fetchMovieList() {
+    print("fetchMovieList")
+    // 1. URL
+    let urlStr = "http://mynf.codershigh.com:8080/api/movies"
+    let url = URL(string: urlStr)!
+    
+    // 2. Request
+    let request = URLRequest(url: url)
+    
+    // 3. Session, Task
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        do {
+            let ret = try JSONDecoder().decode(MovieResponse.self, from: data!)
+            for item in ret.data {
+                print(item.title)
+                print(item.image)
+            }
+        }
+        catch {
+            print("Error", error)
+        }
+    }.resume()
 }
 
 struct ContentView_Previews: PreviewProvider {
