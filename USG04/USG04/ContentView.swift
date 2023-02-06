@@ -7,72 +7,77 @@
 
 import SwiftUI
 
-struct Movie: Codable, Hashable {
-    let title: String
+
+struct Actor: Codable, Hashable {
+    let _id: String
+    let name: String
     let image: String
 }
 
-struct MovieResponse: Codable {
-    let data: [Movie]
+
+
+struct ActorResponse: Codable {
+    let data: [Actor]
 }
 
 struct ContentView: View {
-    @State var movies : [Movie] = []
+    @State private var Movies:[Movie] = []
+    @State private var Actors:[Actor] = []
+    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 1)
+    
     var body: some View {
         VStack {
-            NavigationStack {
-                List {
-                    ForEach(movies, id:\.self) { item in
-                        HStack {
-                            AsyncImage(url: URL(string: "http://mynf.codershigh.com:8080"+item.image)) {
-                                image in
+            NavigationStack{
+                ScrollView(.horizontal){
+                    LazyHGrid(rows: columns) {
+                        ForEach(Actors, id: \.self) { item in
+                            AsyncImage(url: URL(string:"http://mynf.codershigh.com:8080"+item.image)) { image in
                                 image.resizable()
+                                    .frame(width: 150, height:200)
                             } placeholder: {
                                 ProgressView()
                             }
-                            Text(item.title)
                         }
                     }
                 }
-                Button {
-                    fetchMovieList()
-                } label: {
-                    Text("추가 하라")
-                }
+                .navigationTitle("배우")
             }
-            .navigationTitle("영화 리스트")
-            .toolbar {
-                ToolbarItemGroup(placement: .automatic) {
-            
-                }
+            Button("배우 보기"){
+                fetchMovieList()
             }
-            
         }
+        
+        
     }
-}
-
-func fetchMovieList() {
-    print("fetchMovieList")
-    // 1. URL
-    let urlStr = "http://mynf.codershigh.com:8080/api/movies"
-    let url = URL(string: urlStr)!
     
-    // 2. Request
-    let request = URLRequest(url: url)
-    
-    // 3. Session, Task
-    URLSession.shared.dataTask(with: request) { data, response, error in
-        do {
-            let ret = try JSONDecoder().decode(MovieResponse.self, from: data!)
-            for item in ret.data {
-                print(item.title)
-                print(item.image)
+    func fetchMovieList() {
+        print("fetchMovieList")
+        // 1. URL
+        let urlStr = "http://mynf.codershigh.com:8080/api/actors"
+        let url = URL(string: urlStr)!
+        
+        // 2. Request
+        let request = URLRequest(url: url)
+        
+        // 3. Session, Task
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            do {
+                let ret = try JSONDecoder().decode(ActorResponse.self, from: data!)
+                //        print("ret :", ret.data)
+                for item in ret.data {
+                    print(item._id)
+                    print(item.name)
+                    print(item.image)
+                    Actors.append(item)
+                }
             }
-        }
-        catch {
-            print("Error", error)
-        }
-    }.resume()
+            catch {
+                print("Error", error)
+            }
+        }.resume()
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
