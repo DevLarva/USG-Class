@@ -14,41 +14,37 @@ struct Actor: Codable, Hashable {
     let name: String
     let image: String
 }
+
 struct ActorListView: View {
     @State private var Actors:[Actor] = []
     var body: some View {
-        VStack(alignment: .leading) {
-            NavigationStack {
+        NavigationView {
+            VStack(alignment: .leading) {
                 ScrollView(.horizontal){
                     HStack(alignment: .center) {
                         ForEach(Actors, id: \.self) { item in
-                            AsyncImage(url: URL(string:"http://mynf.codershigh.com:8080"+item.image)) { image in
-                                image.resizable()
-                                    .frame(width: 150, height:200)
-                            } placeholder: {
-                                ProgressView()
-                            }
-                        }.buttonStyle(PlainButtonStyle())
-                    }
-                }
-                
-                .navigationTitle("Actors")
-                .toolbar {
-                    ToolbarItemGroup(placement: .automatic) {
-                        Button {
-                            fetchActorList()
-                        } label: {
-                            Image(systemName: "plus")
+                            NavigationLink(destination: DetailView()) {
+                                AsyncImage(url: URL(string:"http://mynf.codershigh.com:8080"+item.image)) { image in
+                                    image.resizable()
+                                        .frame(width: 150, height:200)
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                            }.buttonStyle(PlainButtonStyle())
                         }
                     }
+                    
+                    .navigationTitle("Movie")
+                    
                 }
             }
+            .onAppear(perform: fetchActorList)
         }
     }
     
     
     func fetchActorList() {
-        print("fetchMovieList")
+        print("fetchActorList")
         // 1. URL
         let actorUrlStr = "http://mynf.codershigh.com:8080/api/actors"
         let actorUrl = URL(string: actorUrlStr)!

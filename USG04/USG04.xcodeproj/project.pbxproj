@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC3E84732994D7030009CA9F /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E84722994D7030009CA9F /* CommentView.swift */; };
+		AC3E84752994DCFA0009CA9F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E84742994DCFA0009CA9F /* DetailView.swift */; };
 		AC8D2D5C2987CED4003E192C /* USG04App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D2D5B2987CED4003E192C /* USG04App.swift */; };
 		AC8D2D602987CED6003E192C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2D5F2987CED6003E192C /* Assets.xcassets */; };
 		AC8D2D632987CED6003E192C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2D622987CED6003E192C /* Preview Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC3E84722994D7030009CA9F /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		AC3E84742994DCFA0009CA9F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AC8D2D582987CED4003E192C /* USG04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USG04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8D2D5B2987CED4003E192C /* USG04App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USG04App.swift; sourceTree = "<group>"; };
 		AC8D2D5F2987CED6003E192C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 				AC8D2D692987E896003E192C /* Info.plist */,
 				AC8D2D5B2987CED4003E192C /* USG04App.swift */,
 				ACC26D5A29912A0E00BCECEA /* MovieListView.swift */,
+				AC3E84742994DCFA0009CA9F /* DetailView.swift */,
 				ACC26D7B29915AB900BCECEA /* ActorListView.swift */,
+				AC3E84722994D7030009CA9F /* CommentView.swift */,
 				AC8D2D5F2987CED6003E192C /* Assets.xcassets */,
 				AC8D2D612987CED6003E192C /* Preview Content */,
 			);
@@ -144,6 +150,8 @@
 			files = (
 				AC8D2D5C2987CED4003E192C /* USG04App.swift in Sources */,
 				ACC26D5B29912A0E00BCECEA /* MovieListView.swift in Sources */,
+				AC3E84732994D7030009CA9F /* CommentView.swift in Sources */,
+				AC3E84752994DCFA0009CA9F /* DetailView.swift in Sources */,
 				ACC26D7C29915AB900BCECEA /* ActorListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
